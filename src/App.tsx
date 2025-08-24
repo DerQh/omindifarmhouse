@@ -1,35 +1,90 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import styled from "styled-components";
+
+const Container = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1280px;
+  background-color: aliceblue;
+  margin: 0 auto;
+  /* text-align: center; */
+`;
+
+const Navbar = styled.nav`
+  background-color: darkblue;
+  color: white;
+  padding: 1rem;
+`;
+
+const Navitem = styled.ul`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  color: red;
+  background-color: black;
+  /* margin: 0 1rem; */
+`;
+
+const Logo = styled.div`
+  font-size: 1.5rem;
+  font-weight: bold;
+`;
+const Navlinks = styled.a`
+  color: red;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+
+  &:hover {
+    background-color: darkblue;
+    color: white;
+  }
+`;
+
+const Signup = styled.li`
+  color: red;
+  text-decoration: none;
+  /* padding: 0.5rem 1rem */
+
+  &:hover {
+    background-color: darkblue;
+    color: white;
+  }
+`;
+const SearchInput = styled.input`
+  padding: 0.5rem;
+  border: 1px solid darkblue;
+  border-radius: 4px;
+
+  &:focus {
+    outline: none;
+    border-color: darkblue;
+  }
+`;
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <Container>
+      <Logo> FarmHouse</Logo>
+      <Navbar>
+        <Navitem>
+          <li>
+            <Navlinks href="#">Home</Navlinks>
+          </li>
+          <li>
+            <Navlinks href="#">About</Navlinks>
+          </li>
+          <li>
+            <Navlinks href="#">Contact</Navlinks>
+          </li>
+          <Signup>
+            <Navlinks href="#">Sign Up</Navlinks>
+          </Signup>
+        </Navitem>
+      </Navbar>
+      <SearchInput placeholder="Search..." />
+    </Container>
+  );
 }
 
-export default App
+export default App;
