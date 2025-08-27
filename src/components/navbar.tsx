@@ -40,7 +40,6 @@ function LandingPage(){
         // Display of random available products
         <div>
             <h2>Green & Fresh Products</h2>
-        
         //Single Pproduct divs
             <div>
                 <div>
@@ -53,7 +52,14 @@ function LandingPage(){
                     <button>Add to Cart</button>
                 </div>
             </div>
-           
+        </div>
+
+        //Shop by category
+        <div>
+            <h2>Shop by category</h2>
+            <div>
+                <img src="" alt="" />
+            </div>
         </div>
 
         </>
