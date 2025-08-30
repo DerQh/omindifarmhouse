@@ -1,69 +1,137 @@
+import styled from "styled-components";
 
+const Container = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* max-width: 1280px; */
+  margin: 0 1rem;
+  text-align: center;
+`;
 
+const Navbar = styled.nav`
+  display: none;
+  color: white;
+  padding: 1rem;
+`;
 
-function LandingPage(){
-    return (
-        <>
-        // The main landing page 
-        <div>
-            <h1>We bring the store to your doorstep</h1>
-            <p>Get organic products and sustainably sourced groceries delivered to you all over ALendu and it's environs</p>
-        </div>
-        <div>
-            <button> Shop Now</button>
-        </div>
+const Navitem = styled.ul`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  color: red;
+  background-color: black;
+  /* margin: 0 1rem; */
+`;
 
-        <div>
-            <img src="" alt="Delivery person holding groceries " />
-        </div>
+const Webname = styled.div`
+  font-size: 1rem;
+  font-weight: bold;
+`;
+const Navlinks = styled.a`
+  color: red;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
 
-        // The second page
-        <div>
-            <div>
-                 <img src="Free delivery icon" alt="" />
-                 <p>Free delivery in Alendu and it's environs</p>
-                 <p>Support 24/7</p>
-            </div>
-            <div>
-                <img src="" alt="Cash image" />
-                <p>Pay with M-Pesa or cash on delivery</p>
-                <p>Gurantee amd Refunds </p>
-            </div>
+  &:hover {
+    background-color: darkblue;
+    color: white;
+  }
+`;
 
-            <div>
-                <img src="" alt="Organic Icon" />
-                <p>100% Organc products</p>
-                <p>Secure your future health</p>
-            </div>
-        </div>
+const Signup = styled.li`
+  color: red;
+  text-decoration: none;
+  /* padding: 0.5rem 1rem */
 
-        // Display of random available products
-        <div>
-            <h2>Green & Fresh Products</h2>
-        //Single Pproduct divs
-            <div>
-                <div>
-                    <div>
-                         <button>-Ksh 5</button>
-                    </div>
-                    <img src="" alt="product image" />
-                    <p>Product Description</p>
-                    <p>Ksh 50</p>
-                    <button>Add to Cart</button>
-                </div>
-            </div>
-        </div>
+  &:hover {
+    background-color: darkblue;
+    color: white;
+  }
+`;
+const SearchInput = styled.input`
+  padding: 0.5rem;
+  border: 1px solid darkblue;
+  border-radius: 4px;
 
-        //Shop by category
-        <div>
-            <h2>Shop by category</h2>
-            <div>
-                <img src="" alt="" />
-            </div>
-        </div>
+  &:focus {
+    outline: none;
+    /* border-color: darkblue; */
+  }
+`;
 
-        </>
-    )
+const Toggle = styled.div`
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+`;
+
+const Line = styled.div`
+  height: 3px;
+  background-color: black;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  &:nth-child(1) {
+    width: 90%;
+  }
+  &:nth-child(2) {
+    width: 60%;
+  }
+  &:nth-child(3) {
+    width: 30%;
+  }
+`;
+const Logo = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+`;
+const Image = styled.img`
+  max-width: 100%;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+`;
+
+function LandingPageHeader() {
+  return (
+    <Container>
+      <Toggle>
+        <Line />
+        <Line />
+        <Line />
+      </Toggle>
+      <SearchInput placeholder="Search..." />
+
+      <Navbar>
+        <Navitem>
+          <li>
+            <Navlinks href="#">Home</Navlinks>
+          </li>
+          <li>
+            <Navlinks href="#">About</Navlinks>
+          </li>
+          <li>
+            <Navlinks href="#">Contact</Navlinks>
+          </li>
+          <Signup>
+            <Navlinks href="#">Sign Up</Navlinks>
+          </Signup>
+        </Navitem>
+      </Navbar>
+      <Logo>
+        <Webname> OmiGreens</Webname>
+        <Image src="/src/assets/logo.jpg" alt="FarmHouse Logo" />
+      </Logo>
+    </Container>
+  );
 }
 
-export default LandingPage
+export default LandingPageHeader;
