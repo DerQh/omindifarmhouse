@@ -1,8 +1,13 @@
 import styled from "styled-components";
 
 const Container = styled.div`
-  background-color: #f8f9fa;
+  width: 100%;
+  height: 400px;
   padding: 1rem 0;
+  background-image: url("/src/assets/main.jpg"); /* Path to the image in the public folder */
+  background-size: cover; /* Cover the entire div */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent repeating */
 `;
 
 const SubContainer1 = styled.div`
@@ -17,17 +22,12 @@ const Subheading = styled.h1`
   font-weight: bold;
 `;
 
-const MainImage = styled.img`
-  height: 80px;
-  width: 80px;
-`;
-
 const Paragraphone = styled.p`
   margin: 0 1rem;
 `;
 
 const ShoppingButton = styled.button`
-  background-color: #007bff;
+  background-color: #386530;
   color: white;
   border: none;
   padding: 0.5rem 1rem;
@@ -39,32 +39,19 @@ const ShoppingButton = styled.button`
   }
 `;
 
-const ImageTwo = styled.img`
-  height: 80px;
-  width: 80px;
-`;
-
 function LandingPage() {
   return (
     <>
       <Container>
-        {/* This is the main content area */}
         <SubContainer1>
           <Subheading>Fresh organic vegetables for the village</Subheading>
-          <MainImage src="/src/assets/vegetable.png" alt="" />
         </SubContainer1>
-        {/* Main picture code starts here */}
 
         <ShoppingButton>Start Shoping</ShoppingButton>
         <div>
           <Paragraphone>
             Discover the taste of homegrown goodness.Grown by local farmers.
           </Paragraphone>
-          <ImageTwo src="/src/assets/main.jpg" alt="" />
-          <p>
-            Join our community of farmers and enjoy fresh produce delivered to
-            your door.
-          </p>
         </div>
       </Container>
     </>
