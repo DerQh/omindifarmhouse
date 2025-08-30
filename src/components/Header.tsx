@@ -100,7 +100,7 @@ const Image = styled.img`
   border-radius: 50%;
 `;
 
-function LandingPageHeader() {
+function Header() {
   return (
     <Container>
       <Toggle>
@@ -134,4 +134,4 @@ function LandingPageHeader() {
   );
 }
 
-export default LandingPageHeader;
+export default Header;
