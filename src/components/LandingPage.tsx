@@ -1,19 +1,23 @@
 import styled from "styled-components";
 
 const Container = styled.div`
-  width: 100%;
-  height: 400px;
-  padding: 1rem 0;
+  position: relative;
+  width: 85dvw;
+  height: 70dvh;
+  padding: 1rem;
   background-image: url("/src/assets/main.jpg"); /* Path to the image in the public folder */
   background-size: cover; /* Cover the entire div */
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Prevent repeating */
+  /* margin: 5rem; */
+  border-radius: 1rem;
 `;
 
 const SubContainer1 = styled.div`
   display: flex;
-  /* flex-direction: column; */
+  flex-direction: column;
   align-items: center;
+  width: 85dvw;
 `;
 
 const Subheading = styled.h1`
@@ -27,26 +31,39 @@ const Paragraphone = styled.p`
 `;
 
 const ShoppingButton = styled.button`
-  background-color: #386530;
-  color: white;
+  position: absolute;
+  top: 80%;
+  left: 10%;
+  background-color: #e5f40e;
+  color: #0e530a;
   border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 0.25rem;
+  padding: 0.6rem 1.5rem;
+  border-radius: 0.6rem;
   cursor: pointer;
+  font-size: large;
+  font-weight: 600;
 
   &:hover {
-    background-color: #0056b3;
+    color: #e5f40e;
+    background-color: #0e530a;
   }
+`;
+
+const ContainerMain = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 `;
 
 function LandingPage() {
   return (
-    <>
+    <ContainerMain>
+      <SubContainer1>
+        <Subheading>Fresh organic vegetables for the village</Subheading>
+      </SubContainer1>
       <Container>
-        <SubContainer1>
-          <Subheading>Fresh organic vegetables for the village</Subheading>
-        </SubContainer1>
-
         <ShoppingButton>Start Shoping</ShoppingButton>
         <div>
           <Paragraphone>
@@ -54,7 +71,7 @@ function LandingPage() {
           </Paragraphone>
         </div>
       </Container>
-    </>
+    </ContainerMain>
   );
 }
 
