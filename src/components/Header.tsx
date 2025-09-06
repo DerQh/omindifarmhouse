@@ -128,7 +128,7 @@ function Header() {
       </Navbar>
       <Logo>
         <Webname> OmiGreens</Webname>
-        <Image src="/src/assets/logo.jpg" alt="FarmHouse Logo" />
+        <Image src="../public/logo.jpg" alt="FarmHouse Logo" />
       </Logo>
     </Container>
   );

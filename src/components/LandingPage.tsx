@@ -5,7 +5,7 @@ const Container = styled.div`
   width: 85dvw;
   height: 70dvh;
   padding: 1rem;
-  background-image: url("/src/assets/main.jpg"); /* Path to the image in the public folder */
+  background-image: url("../../public/main.jpg"); /* Path to the image in the public folder */
   background-size: cover; /* Cover the entire div */
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Prevent repeating */
