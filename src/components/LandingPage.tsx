@@ -24,7 +24,7 @@ const Subheading = styled.h1`
   font-size: 2.1rem;
   font-style: oblique;
   font-weight: bold;
-`;
+`; 
 
 const Paragraphone = styled.p`
   margin: 0 1rem;
