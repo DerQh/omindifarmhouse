@@ -5,7 +5,7 @@ const Container = styled.div`
   width: 85dvw;
   height: 70dvh;
   padding: 1rem;
-  background-image: url("../../public/main.jpg"); /* Path to the image in the public folder */
+  background-image: url("/main.jpg"); /* Path to the image in the public folder */
   background-size: cover; /* Cover the entire div */
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Prevent repeating */
@@ -24,7 +24,7 @@ const Subheading = styled.h1`
   font-size: 2.1rem;
   font-style: oblique;
   font-weight: bold;
-`; 
+`;
 
 const Paragraphone = styled.p`
   margin: 0 1rem;
