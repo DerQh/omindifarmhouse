@@ -1,3 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* @font-face {
+  font-family: "Jost";
+  src: url("./fonts/Jost-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+} */
+
 /* :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -11,12 +20,15 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+
+  MAIN COLORS TO USE #DDFO2A (YELLOW), #4B622E (GREEN), #242424 (DARK BACKGROUND), #FFFFFF (WHITE), #1A1A1A(BLACK)
+  FONT - JOST 
 } */
-
-
 
 body {
   margin: 0 auto;
-  /* min-width: 320px; */
+  font-family: "Jost", sans-serif;
+  min-width: 320px;
   /* min-height: 100vh; */
 }

@@ -31,15 +31,15 @@ const Paragraphone = styled.p`
 `;
 
 const ShoppingButton = styled.button`
+  background-color: #e5f40e;
   position: absolute;
   top: 80%;
   left: 10%;
-  background-color: #e5f40e;
+  cursor: pointer;
   color: #0e530a;
   border: none;
   padding: 0.6rem 1.5rem;
   border-radius: 0.6rem;
-  cursor: pointer;
   font-size: large;
   font-weight: 600;
 
