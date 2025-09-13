@@ -104,10 +104,9 @@ const MainContainer = styled.div`
 // PRODUCT IMAGE AND DETAILS CONTAINER
 const AllCategory = styled.h2`
   text-align: left;
-  width: 90dvw;
+  width: 100%;
   font-size: 1.5rem;
   color: #24695a;
-  /* margin: 1rem 0; */
   span {
     cursor: pointer;
   }
@@ -117,12 +116,8 @@ const Container = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-  width: 90dvw;
+  width: 100%;
   height: 80dvh;
-  /* background-image: url("https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"); */
-  background-size: cover; /* Ensure the image covers the entire container */
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Prevent repeating */
   border-radius: 1rem;
 `;
 
@@ -136,32 +131,32 @@ const ProductImage = styled.img`
 
 const ImageContainer = styled.div`
   width: 50%;
-  /* height: 90%; */
+  height: 90%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   /* gap: 1rem; */
-  border: 1px solid #e0e0e0;
-`;
-
-const ImageSubContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
+  /* border: 1px solid #e0e0e0; */
+  border-radius: 0.5rem;
 `;
 
 // PRODUCT TEXT AND DETAILS
 
 const TextContainer = styled.div`
+  position: relative;
+  width: 50%;
+  height: 90%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
   gap: 0.8rem;
   max-width: 450px;
+  margin: 0;
+  padding: 2rem;
+  /* border: 1px solid #e0e0e0; */
+  /* border-radius: 0.5rem; */
 `;
 
 const RatingsDiv = styled.div`
@@ -204,6 +199,7 @@ const ButtonDiv = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  padding-top: 1rem;
   /* gap: 1rem; */
 `;
 
@@ -284,13 +280,13 @@ const WishListDiv = styled.div`
   gap: 0.5rem;
 `;
 const WishlistText = styled.p`
-  font-size: 0.7rem;
+  font-size: 0.9rem;
   color: #24695a;
   text-decoration: underline;
 `;
 
 const CompareText = styled.p`
-  font-size: 0.7rem;
+  font-size: 0.9rem;
   color: #24695a;
   text-decoration: underline;
 `;

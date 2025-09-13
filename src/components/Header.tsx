@@ -127,7 +127,7 @@ function Header() {
         </Navitem>
       </Navbar>
       <Logo>
-        <Webname> OmiGreens</Webname>
+        <Webname> Omigreens</Webname>
         <Image src="/logo.jpg" alt="FarmHouse Logo" />
       </Logo>
     </Container>
