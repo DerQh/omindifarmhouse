@@ -84,6 +84,7 @@ export default OtherStores;
 
 const Container = styled.div`
   max-width: 1000px;
+  width: 100%;
   margin: 2rem auto;
   display: flex;
   flex-direction: column;
