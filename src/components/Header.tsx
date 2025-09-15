@@ -5,7 +5,8 @@ const Container = styled.div`
   align-items: center;
   justify-content: space-between;
   /* max-width: 1280px; */
-  margin: 0 1rem;
+  /* margin: 0 1rem;  TO REVIEW*/
+  padding: 1rem 1.5rem;
   text-align: center;
 `;
 

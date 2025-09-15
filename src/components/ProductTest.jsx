@@ -11,6 +11,11 @@ function ProductMain() {
       <Container>
         <ImageContainer>
           <ProductImage src="/tomatoe.jpg" alt="Product" />
+          {/* <ImageSubContainer>
+            <ProductImage src="https://via.placeholder.com/100" alt="Product" />
+            <ProductImage src="https://via.placeholder.com/100" alt="Product" />
+            <ProductImage src="https://via.placeholder.com/100" alt="Product" />
+          </ImageSubContainer> */}
         </ImageContainer>
         <TextContainer>
           <FarmName>Alendu Farm</FarmName>
@@ -20,6 +25,7 @@ function ProductMain() {
             <span>4.5 Rating</span>
             <Reviews>(100 reviews)</Reviews>
           </RatingsDiv>
+
           <Price>
             Ksh 24.99 <span> /kg</span>
           </Price>
@@ -83,8 +89,6 @@ function ProductMain() {
 }
 
 export default ProductMain;
-
-// BREAKPOINTS - RESPONSIVE WEBSITE 
 const breakpoints = {
   xs: "576px", // Extra Small Devices
   sm: "768px", // Small Devices
@@ -97,21 +101,25 @@ const MainContainer = styled.div`
   height: 100%;
   max-width: 1000px;
   margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 `;
 
 // PRODUCT IMAGE AND DETAILS CONTAINER
 const AllCategory = styled.h2`
   text-align: left;
+  width: 100%;
   font-size: 1.5rem;
   color: #24695a;
-  /* border: 2px solid red; */
-  padding: 0 1.5rem;
-
+  border: 2px solid red;
   span {
     cursor: pointer;
   }
   @media (max-width: ${breakpoints.xs}) {
     font-size: 14px; /* Extra Small Devices */
+    padding-left: 2rem;
   }
 
   @media (min-width: ${breakpoints.xs}) and (max-width: ${breakpoints.sm}) {
@@ -133,44 +141,44 @@ const AllCategory = styled.h2`
   }
 `;
 const Container = styled.div`
-  /* border: 2px solid red; */
+  border: 2px solid red;
+
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-  padding: 0.5rem 1.5rem;
-  /* width: 100%; */
-  /* padding: 2rem 1rem; */
+  width: 100%;
+
   /* height: 80dvh; */
 
   @media (max-width: ${breakpoints.xs}) {
     font-size: 14px;
     flex-direction: column;
-    padding: 0.3rem 1.5rem;
+    width: 100%;
+    padding-left: 2rem;
   }
 
   @media (min-width: ${breakpoints.xs}) and (max-width: ${breakpoints.sm}) {
     font-size: 16px;
     flex-direction: column;
-    padding: 0.4rem 1.5rem;
   }
 `;
 
 const ProductImage = styled.img`
   max-width: 100%;
-  height: 450px;
-  width: 450px;
-  min-width: 200px;
+  height: 400px;
+  width: 400px;
+  /* max-width: 450px; */
   border-radius: 10px;
   object-fit: cover;
   @media (max-width: ${breakpoints.xs}) {
-    height: 300px;
-    width: 300px;
+    max-height: 200px;
+    max-width: 200px;
   }
 
   @media (min-width: ${breakpoints.xs}) and (max-width: ${breakpoints.sm}) {
-    max-height: 350px;
-    max-width: 350px;
+    max-height: 300px;
+    max-width: 300px;
   }
 `;
 
@@ -191,22 +199,10 @@ const TextContainer = styled.div`
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+  max-width: 450px;
   margin: 0;
+  /* padding: 2rem; */
   /* border: 1px solid #ac1f1f; */
-  @media (max-width: ${breakpoints.xs}) {
-    gap: 2px;
-  }
-
-  @media (min-width: ${breakpoints.xs}) and (max-width: ${breakpoints.sm}) {
-    gap: 3px;
-  }
-  @media (min-width: ${breakpoints.md}) and (max-width: ${breakpoints.lg}) {
-    max-width: 500px;
-  }
-
-  @media (min-width: ${breakpoints.lg}) {
-    max-width: 500px;
-  }
 `;
 
 const RatingsDiv = styled.div`
@@ -244,24 +240,24 @@ const Title = styled.h2`
   color: #24695a;
   margin: 0;
   @media (max-width: ${breakpoints.xs}) {
-    font-size: 20px;
+    font-size: 16px;
   }
 
   @media (min-width: ${breakpoints.xs}) and (max-width: ${breakpoints.sm}) {
-    font-size: 22px;
+    font-size: 18px;
   }
 `;
 
 const Price = styled.p`
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: bold;
   color: #24695a;
   @media (max-width: ${breakpoints.xs}) {
-    font-size: 20px;
+    font-size: 16px;
   }
 
   @media (min-width: ${breakpoints.xs}) and (max-width: ${breakpoints.sm}) {
-    font-size: 22px;
+    font-size: 18px;
   }
 `;
 const ButtonDiv = styled.div`
@@ -356,25 +352,27 @@ const PayLaterDiv = styled.div`
   color: #24695a;
   border: 0.1px solid #cdd1d0;
   text-align: center;
-  padding: 0.8rem 0rem;
+  padding: 1rem 0;
   border-radius: 10px;
   cursor: pointer;
   font-size: 0.9rem;
   @media (max-width: ${breakpoints.xs}) {
+    width: 100%;
     font-size: 14px;
-    padding: 0.6rem 0rem;
+    padding: 0.8rem 2rem;
   }
 
   @media (min-width: ${breakpoints.xs}) and (max-width: ${breakpoints.sm}) {
+    width: 100%;
     font-size: 16px;
-    padding: 1rem 0rem;
+    padding: 0.9rem 2.5rem;
   }
 `;
 const MpesaSvg = styled.img`
   width: 50px;
   height: 20px;
   object-fit: cover;
-  /* margin: 0.5rem; */
+  margin-right: 0.5rem;
 `;
 
 const WishListContainer = styled.div`
@@ -391,27 +389,32 @@ const WishListDiv = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  gap: 0.6rem;
+  gap: 0.5rem;
+`;
+const WishlistText = styled.p`
+  font-size: 0.9rem;
+  color: #24695a;
+  text-decoration: underline;
   @media (max-width: ${breakpoints.xs}) {
     font-size: 12px;
-    gap: 0.4rem;
   }
 
   @media (min-width: ${breakpoints.xs}) and (max-width: ${breakpoints.sm}) {
     font-size: 14px;
-    gap: 0.5rem;
   }
-`;
-const WishlistText = styled.p`
-  /* font-size: 0.9rem; */
-  color: #24695a;
-  text-decoration: underline;
 `;
 
 const CompareText = styled.p`
-  /* font-size: 0.9rem; */
+  font-size: 0.9rem;
   color: #24695a;
   text-decoration: underline;
+  @media (max-width: ${breakpoints.xs}) {
+    font-size: 12px;
+  }
+
+  @media (min-width: ${breakpoints.xs}) and (max-width: ${breakpoints.sm}) {
+    font-size: 14px;
+  }
 `;
 const DetailsContainer = styled.div`
   display: flex;

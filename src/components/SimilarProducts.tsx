@@ -44,14 +44,22 @@ function SimilarProducts() {
 
 export default SimilarProducts;
 
+const breakpoints = {
+  xs: "576px", // Extra Small Devices
+  sm: "768px", // Small Devices
+  md: "992px", // Medium Devices
+  lg: "1200px", // Large Devices
+};
+
 const MainContainer = styled.div`
-  display: flex;
+  /* border: 1px solid red; */
+  /* display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  width: 100%;
+  justify-content: center; */
+  /* width: 100%; */
   max-width: 1000px;
-  margin: 2rem auto;
+  /* margin: 2rem auto; */
 `;
 
 const ProductsContainer = styled.div`
@@ -60,47 +68,150 @@ const ProductsContainer = styled.div`
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  margin-top: 2rem;
+  margin: 1.5rem;
   flex-wrap: wrap;
 `;
 
 const ProductCard = styled.div`
   width: 200px;
   height: 300px;
-  padding: 10px;
+  padding: 12px;
   border: 1px solid #e0e0e0;
   border-radius: 0.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  @media (max-width: ${breakpoints.xs}) {
+    font-size: 18px;
+    width: 150px;
+    height: 280px;
+    padding: 12px;
+    /* gap: 1px; */
+  }
+
+  @media (min-width: ${breakpoints.xs}) and (max-width: ${breakpoints.sm}) {
+    font-size: 18px;
+    /* padding: 10px; */
+  }
+
+  @media (min-width: ${breakpoints.sm}) and (max-width: ${breakpoints.md}) {
+    font-size: 20px;
+    /* padding: 10px; */
+  }
+
+  @media (min-width: ${breakpoints.md}) and (max-width: ${breakpoints.lg}) {
+    /* font-size: 22px; */
+  }
+
+  @media (min-width: ${breakpoints.lg}) {
+    /* font-size: 24px; */
+  }
 `;
 
 const Title = styled.h2`
-  width: 100%;
   text-align: left;
   font-size: 1.8rem;
   font-weight: 600;
-  margin: 0;
+  margin-left: 1.5rem;
+  font-weight: 600;
+  color: #122d27;
+  /* padding-left: 1.5rem; */
+  @media (max-width: ${breakpoints.xs}) {
+    font-size: 18px;
+  }
+
+  @media (min-width: ${breakpoints.xs}) and (max-width: ${breakpoints.sm}) {
+    font-size: 18px;
+  }
+
+  @media (min-width: ${breakpoints.sm}) and (max-width: ${breakpoints.md}) {
+    font-size: 20px;
+  }
+
+  @media (min-width: ${breakpoints.md}) and (max-width: ${breakpoints.lg}) {
+    /* font-size: 22px; */
+  }
+
+  @media (min-width: ${breakpoints.lg}) {
+    /* font-size: 24px; */
+  }
 `;
 
 const Price = styled.h3`
   font-size: 1.2rem;
   font-weight: 400;
   margin: 0.5rem 0 0 0;
+  @media (max-width: ${breakpoints.xs}) {
+    font-size: 18px;
+  }
+
+  @media (min-width: ${breakpoints.xs}) and (max-width: ${breakpoints.sm}) {
+    font-size: 18px;
+  }
+
+  @media (min-width: ${breakpoints.sm}) and (max-width: ${breakpoints.md}) {
+    font-size: 20px;
+  }
+
+  @media (min-width: ${breakpoints.md}) and (max-width: ${breakpoints.lg}) {
+    /* font-size: 22px; */
+  }
+
+  @media (min-width: ${breakpoints.lg}) {
+    /* font-size: 24px; */
+  }
 `;
 
 const VendorImage = styled.img`
   width: 100px;
   height: 100px;
   object-fit: cover;
-  border-radius: 50%;
+  @media (max-width: ${breakpoints.xs}) {
+    width: 100px;
+    height: 100px;
+  }
+
+  @media (min-width: ${breakpoints.xs}) and (max-width: ${breakpoints.sm}) {
+    width: 105px;
+    height: 105px;
+  }
+
+  @media (min-width: ${breakpoints.sm}) and (max-width: ${breakpoints.md}) {
+    width: 110px;
+    height: 110px;
+  }
+
+  @media (min-width: ${breakpoints.md}) and (max-width: ${breakpoints.lg}) {
+  }
+
+  @media (min-width: ${breakpoints.lg}) {
+  }
 `;
 
 const ProductName = styled.h3`
   font-size: 1.2rem;
   font-weight: 600;
   margin: 0.5rem 0 0 0;
+  @media (max-width: ${breakpoints.xs}) {
+    font-size: 18px;
+  }
+
+  @media (min-width: ${breakpoints.xs}) and (max-width: ${breakpoints.sm}) {
+    font-size: 18px;
+  }
+
+  @media (min-width: ${breakpoints.sm}) and (max-width: ${breakpoints.md}) {
+    font-size: 20px;
+  }
+
+  @media (min-width: ${breakpoints.md}) and (max-width: ${breakpoints.lg}) {
+    /* font-size: 22px; */
+  }
+
+  @media (min-width: ${breakpoints.lg}) {
+    /* font-size: 24px; */
+  }
 `;
 
 const Grams = styled.p`
@@ -116,9 +227,10 @@ const VendorName = styled.p`
   margin: 0.3rem 0 0 0;
 `;
 const CartButton = styled.button`
+  margin-top: 10px;
   padding: 1rem;
   text-align: center;
-  margin: 1.5rem 0 0 0;
+  /* margin: 1.5rem 0 0 0; */
   width: 40px;
   height: 40px;
   display: flex;
@@ -135,6 +247,15 @@ const CartButton = styled.button`
     border: 2px solid #24695a;
     background-color: #f2f4ec;
     color: #24695a;
+  }
+  @media (max-width: ${breakpoints.xs}) {
+    width: 30px;
+    height: 30px;
+  }
+
+  @media (min-width: ${breakpoints.xs}) and (max-width: ${breakpoints.sm}) {
+    width: 35px;
+    height: 35px;
   }
 `;
 // Additional styled components that might be useful in ProductMain.ts

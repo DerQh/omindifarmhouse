@@ -82,28 +82,57 @@ export default OtherStores;
 // https://picsum.photos/200/300  -- FREE IMAGES FOR PRODUCT
 // PRODUCT TEXT AND DETAILS
 
+const breakpoints = {
+  xs: "576px", // Extra Small Devices
+  sm: "768px", // Small Devices
+  md: "992px", // Medium Devices
+  lg: "1200px", // Large Devices
+};
+
 const Container = styled.div`
   max-width: 1000px;
-  width: 100%;
+  /* width: 100%; */
   margin: 2rem auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding-top: 1rem;
-  gap: 1rem;
+  /* gap: 1rem; */
+  /* border: 1px solid red; */
 `;
 
 const Title = styled.h2`
-  font-size: 1.8rem;
+  /* font-size: 1.8rem; */
   font-weight: 600;
   margin: 0;
   color: #122d27;
+  padding-left: 1.5rem;
+  @media (max-width: ${breakpoints.xs}) {
+    font-size: 18px;
+  }
+
+  @media (min-width: ${breakpoints.xs}) and (max-width: ${breakpoints.sm}) {
+    font-size: 18px;
+  }
+
+  @media (min-width: ${breakpoints.sm}) and (max-width: ${breakpoints.md}) {
+    font-size: 20px;
+  }
+
+  @media (min-width: ${breakpoints.md}) and (max-width: ${breakpoints.lg}) {
+    font-size: 22px;
+  }
+
+  @media (min-width: ${breakpoints.lg}) {
+    font-size: 24px;
+  }
 `;
 
 const TitleDiv = styled.div`
   width: 100%;
-  padding: 1rem;
+  /* border: 1px solid red;
+  padding: 1rem; */
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -133,6 +162,14 @@ const VendorsDiv = styled.div`
   gap: 1rem;
   margin-top: 1rem;
   flex-wrap: wrap;
+  @media (max-width: ${breakpoints.xs}) {
+    font-size: 14px;
+    grid-template-columns: auto;
+  }
+
+  @media (min-width: ${breakpoints.xs}) and (max-width: ${breakpoints.sm}) {
+    font-size: 16px; /* Small Devices */
+  }
 `;
 const VendorCard = styled.div`
   /* width: 200px; */
@@ -141,10 +178,31 @@ const VendorCard = styled.div`
   border-radius: 0.5rem;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   padding: 0.5rem 1rem;
+  margin: 0 1.5rem;
   gap: 1rem;
   cursor: pointer;
+  @media (max-width: ${breakpoints.xs}) {
+    padding: 0.5rem 1rem;
+  }
+
+  @media (min-width: ${breakpoints.xs}) and (max-width: ${breakpoints.sm}) {
+    padding: 0.5rem 1rem;
+    /* gap: 0.5rem; */
+  }
+
+  @media (min-width: ${breakpoints.sm}) and (max-width: ${breakpoints.md}) {
+    font-size: 18px;
+  }
+
+  @media (min-width: ${breakpoints.md}) and (max-width: ${breakpoints.lg}) {
+    font-size: 20px;
+  }
+
+  @media (min-width: ${breakpoints.lg}) {
+    font-size: 22px;
+  }
 `;
 
 const VendorSubCard = styled.div`
@@ -174,6 +232,7 @@ const Arrow = styled.img`
   height: 15px;
   object-fit: cover;
   margin-left: 0.3rem;
+  padding-right: 1.5rem;
   cursor: pointer;
 `;
 

@@ -47,26 +47,24 @@ function Footer() {
       <Divider />
       <FooterDivs>
         <div>
-          <div>
+          <FooterItemDiv>
             <FooterImg src="/seller.png" alt="" />
             <FooterText>Become a Seller</FooterText>
-          </div>
-          <div>
+          </FooterItemDiv>
+          <FooterItemDiv>
             <FooterImg src="/gift.png" alt="" />
             <FooterText>Gift Cards</FooterText>
-          </div>
-          <div>
+          </FooterItemDiv>
+          <FooterItemDiv>
             <FooterImg src="/question.png" alt="" />
             <FooterText>Help Center</FooterText>
-          </div>
+          </FooterItemDiv>
         </div>
         <div>
-          <FooterText>
-            Terms of Use <span>Privacy policy</span>
-          </FooterText>
+          <FooterText>Terms of Use</FooterText>
         </div>
         <FooterText>
-          All Rights reserved by Omigreens @ <span>2025</span>
+          All Rights reserved Omigreens @ <span>2025</span>
         </FooterText>
       </FooterDivs>
     </Container>
@@ -75,18 +73,24 @@ function Footer() {
 
 export default Footer;
 
+const breakpoints = {
+  xs: "576px", // Extra Small Devices
+  sm: "768px", // Small Devices
+  md: "992px", // Medium Devices
+  lg: "1200px", // Large Devices
+};
+
 const Container = styled.div`
-  width: 100%;
-  margin: auto 0;
   background-color: #f2f4ec;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
+  /* border: 1px solid red; */
 `;
 
 const FooterContainer = styled.footer`
-  width: 100%;
+  /* border: 1px solid red; */
   max-width: 1500px;
   color: #111313;
   padding: 4rem 1rem;
@@ -94,9 +98,25 @@ const FooterContainer = styled.footer`
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   gap: 2rem;
+  border-bottom: 0.1px solid red;
   flex-wrap: wrap;
+  @media (max-width: ${breakpoints.xs}) {
+    padding: 1.5rem;
+    gap: 1rem;
+    justify-content: space-around;
+  }
+
+  @media (min-width: ${breakpoints.xs}) and (max-width: ${breakpoints.sm}) {
+    /* font-size: 18px; */
+    /* padding: 10px; */
+  }
+
+  @media (min-width: ${breakpoints.sm}) and (max-width: ${breakpoints.md}) {
+    /* font-size: 20px; */
+    /* padding: 10px; */
+  }
 `;
 
 const SubContainer = styled.div`
@@ -109,7 +129,15 @@ const SubContainer = styled.div`
   align-items: start;
   justify-content: start;
   text-align: left;
-  /* gap: 1rem; */
+  gap: 1rem;
+  @media (max-width: ${breakpoints.xs}) {
+    height: 200px;
+    margin: 0;
+    padding: 10px 0px;
+    gap: 2px;
+    text-align: center;
+  }
+
   p {
     font-size: 0.8rem;
     color: #161313;
@@ -120,6 +148,10 @@ const SubContainer = styled.div`
     font-weight: 500;
     color: #070707;
     margin-bottom: 0.5rem;
+    @media (max-width: ${breakpoints.xs}) {
+      margin-top: 10px;
+      font-size: 1.1rem;
+    }
   }
   h5 {
     font-size: 0.8rem;
@@ -136,6 +168,10 @@ const SubContainer = styled.div`
     align-items: start;
     justify-content: start;
     gap: 0.5rem;
+    @media (max-width: ${breakpoints.xs}) {
+      gap: 0.2rem;
+    }
+
     li {
       font-size: 0.8rem;
       color: #161313;
@@ -147,7 +183,7 @@ const SubContainer = styled.div`
   }
 `;
 const LogoDiv = styled.div`
-  width: 100%;
+  /* width: 100%; */
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -170,7 +206,7 @@ const LogoDiv = styled.div`
   }
 `;
 const PaymentDiv = styled.div`
-  width: 100%;
+  /* width: 100%; */
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -186,7 +222,7 @@ const PaymentDiv = styled.div`
   }
 `;
 const Divider = styled.div`
-  width: 100%;
+  /* width: 100%; */
   max-width: 1200px;
   height: 2px;
   background-color: #000000;
@@ -194,7 +230,7 @@ const Divider = styled.div`
 `;
 
 const FooterDivs = styled.div`
-  width: 100%;
+  /* width: 100%; */
   max-width: 1200px;
   display: flex;
   flex-direction: row;
@@ -206,7 +242,8 @@ const FooterDivs = styled.div`
     display: flex;
     padding: 0;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
+    justify-content: space-between;
   }
 `;
 
@@ -220,4 +257,28 @@ const FooterText = styled.p`
   font-size: 0.7rem;
   font-weight: 300;
   color: gray;
+  margin-right: 5px;
 `;
+const FooterItemDiv = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  margin: 0 15px;
+
+  @media (max-width: ${breakpoints.xs}) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid red; */
+    text-align: center;
+  }
+`;
+// Service: Bolo Dialer
+// Voucher:2709061/1266181388
+// Serial Number:13329551
+// Expiry Date:2050-01-01
+// Transaction ID: 41125178
+// Successful
+
+// Thank you for using SADAD!

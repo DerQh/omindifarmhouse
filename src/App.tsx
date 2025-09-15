@@ -20,3 +20,7 @@ function App() {
 export default App;
 
 // https://www.vecteezy.com/photo/24445456-tomato-on-the-white-background-generate-ai  -- FREE IMAGES FOR PRODUCT
+// color picker  -  https://imagecolorpicker.com/
+// https://www.flaticon.com/ ICONS
+// https://vercel.com/home DEPLOYMENT
+// https://removal.ai/ REMOVE BACKGROUND IMAGE 
