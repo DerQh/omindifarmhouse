@@ -52,14 +52,7 @@ const breakpoints = {
 };
 
 const MainContainer = styled.div`
-  /* border: 1px solid red; */
-  /* display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center; */
-  /* width: 100%; */
   max-width: 1000px;
-  /* margin: 2rem auto; */
 `;
 
 const ProductsContainer = styled.div`
@@ -78,25 +71,29 @@ const ProductCard = styled.div`
   padding: 12px;
   border: 1px solid #e0e0e0;
   border-radius: 0.5rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
+  margin: 0 auto;
+  text-align: center;
+
   @media (max-width: ${breakpoints.xs}) {
     font-size: 18px;
-    width: 150px;
+    /* width: 150px; */
+    width: 40%;
     height: 280px;
-    padding: 12px;
+    padding: 10px;
     /* gap: 1px; */
   }
 
   @media (min-width: ${breakpoints.xs}) and (max-width: ${breakpoints.sm}) {
     font-size: 18px;
-    /* padding: 10px; */
+    width: 40%;
+    height: 300px;
+    padding: 10px;
   }
 
   @media (min-width: ${breakpoints.sm}) and (max-width: ${breakpoints.md}) {
     font-size: 20px;
+    height: 350px;
+
     /* padding: 10px; */
   }
 
@@ -140,10 +137,10 @@ const Title = styled.h2`
 
 const Price = styled.h3`
   font-size: 1.2rem;
-  font-weight: 400;
+  font-weight: 450;
   margin: 0.5rem 0 0 0;
   @media (max-width: ${breakpoints.xs}) {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   @media (min-width: ${breakpoints.xs}) and (max-width: ${breakpoints.sm}) {
@@ -168,8 +165,8 @@ const VendorImage = styled.img`
   height: 100px;
   object-fit: cover;
   @media (max-width: ${breakpoints.xs}) {
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
   }
 
   @media (min-width: ${breakpoints.xs}) and (max-width: ${breakpoints.sm}) {
@@ -178,8 +175,8 @@ const VendorImage = styled.img`
   }
 
   @media (min-width: ${breakpoints.sm}) and (max-width: ${breakpoints.md}) {
-    width: 110px;
-    height: 110px;
+    width: 120px;
+    height: 120px;
   }
 
   @media (min-width: ${breakpoints.md}) and (max-width: ${breakpoints.lg}) {
@@ -194,7 +191,7 @@ const ProductName = styled.h3`
   font-weight: 600;
   margin: 0.5rem 0 0 0;
   @media (max-width: ${breakpoints.xs}) {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   @media (min-width: ${breakpoints.xs}) and (max-width: ${breakpoints.sm}) {
@@ -218,22 +215,36 @@ const Grams = styled.p`
   font-size: 1rem;
   font-weight: 400;
   color: #666;
-  margin: 0.3rem 0 0 0;
+  /* margin: 0.3rem 0 0 0; */
+  @media (max-width: ${breakpoints.xs}) {
+    font-size: 12px;
+  }
+
+  @media (min-width: ${breakpoints.xs}) and (max-width: ${breakpoints.sm}) {
+    font-size: 18px;
+  }
+
+  @media (min-width: ${breakpoints.sm}) and (max-width: ${breakpoints.md}) {
+    font-size: 20px;
+  }
 `;
 const VendorName = styled.p`
   font-size: 1rem;
   font-weight: 400;
   color: #666;
   margin: 0.3rem 0 0 0;
+  line-height: 18px;
 `;
+
 const CartButton = styled.button`
-  margin-top: 10px;
-  padding: 1rem;
+  margin-top: 5px;
+  /* padding: 1rem; */
   text-align: center;
   /* margin: 1.5rem 0 0 0; */
   width: 40px;
   height: 40px;
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   background-color: #24695a;

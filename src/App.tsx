@@ -1,3 +1,4 @@
+import CheckoutPage from "./components/Checkout";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import OtherStores from "./components/OtherStores";
@@ -9,9 +10,10 @@ function App() {
   return (
     <>
       <Header />
+      <CheckoutPage />
       {/* <LandingPage /> */}
-      <ProductMain />
-      <OtherStores />
+      {/* <ProductMain /> */}
+      {/* <OtherStores /> */}
       <Footer />
     </>
   );
@@ -23,4 +25,4 @@ export default App;
 // color picker  -  https://imagecolorpicker.com/
 // https://www.flaticon.com/ ICONS
 // https://vercel.com/home DEPLOYMENT
-// https://removal.ai/ REMOVE BACKGROUND IMAGE 
+// https://removal.ai/ REMOVE BACKGROUND IMAGE

@@ -133,15 +133,12 @@ const AllCategory = styled.h2`
   }
 `;
 const Container = styled.div`
-  /* border: 2px solid red; */
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
   padding: 0.5rem 1.5rem;
-  /* width: 100%; */
-  /* padding: 2rem 1rem; */
-  /* height: 80dvh; */
+
 
   @media (max-width: ${breakpoints.xs}) {
     font-size: 14px;
@@ -192,7 +189,7 @@ const TextContainer = styled.div`
   align-items: flex-start;
   justify-content: center;
   margin: 0;
-  /* border: 1px solid #ac1f1f; */
+
   @media (max-width: ${breakpoints.xs}) {
     gap: 2px;
   }
