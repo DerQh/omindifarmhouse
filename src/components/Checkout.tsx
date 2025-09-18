@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import OrderSummaryComponent from "./OrderSummary";
 
 const CheckoutContainer = styled.div`
   display: flex;
@@ -367,6 +368,7 @@ const CheckoutPage: React.FC = () => {
       <OrderSummary>
         <h2>Order Summary</h2>
         {/* Order summary content goes here */}
+        <OrderSummaryComponent />
       </OrderSummary>
     </CheckoutContainer>
   );
