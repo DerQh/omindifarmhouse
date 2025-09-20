@@ -6,15 +6,15 @@ function OrderSummaryComponent() {
       <RadioGroup>
         <RadioLabel>
           <Input type="radio" name="option" value="option1" />
-          Option 1
+          Online Payment
         </RadioLabel>
         <RadioLabel>
           <Input type="radio" name="option" value="option2" />
-          Option 2
+          Cash on delivery
         </RadioLabel>
         <RadioLabel>
           <Input type="radio" name="option" value="option3" />
-          Option 3
+          Mpesa on delivery
         </RadioLabel>
       </RadioGroup>
       <PromoCodeSection>
@@ -23,19 +23,19 @@ function OrderSummaryComponent() {
       </PromoCodeSection>
       <Summary>
         <SummaryItem>
-          <Label>Subtotal</Label>
+          <p>Subtotal</p>
           <Value>KES 259.99</Value>
         </SummaryItem>
         <SummaryItem>
-          <Label>Delivery Fee</Label>
+          <p>Delivery Fee</p>
           <Value>KES 50.00</Value>
         </SummaryItem>
         <SummaryItem>
-          <Label>Coupon Discount</Label>
+          <p>Coupon Discount</p>
           <Value>-KES 9.99</Value>
         </SummaryItem>
         <SummaryItem>
-          <Label>Taxes</Label>
+          <p>Taxes</p>
           <Value>KES 28.00</Value>
         </SummaryItem>
         <Total>
@@ -45,7 +45,7 @@ function OrderSummaryComponent() {
       </Summary>
       <Button primary>Confirm Order</Button>
       <OfferSection>
-        <OfferImage src="" alt="Cashback Offer" />
+        <OfferImage src="/discount.png" alt="Cashback Offer" />
         <OfferText>
           <p>Earn 5% cashback on your first order</p>
           <a href="">Learn More</a>
@@ -61,7 +61,7 @@ const Container = styled.div`
   padding: 20px;
   background-color: #ffffff;
   border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); */
 `;
 
 const RadioGroup = styled.div`
@@ -72,8 +72,8 @@ const RadioLabel = styled.label`
   display: block;
   margin: 10px 0;
   cursor: pointer;
-  font-size: 16px;
-  color: #555;
+  font-size: 14px;
+  color: #8b8b8b;
 
   input {
     margin-right: 10px;
@@ -103,10 +103,11 @@ interface ButtonProps {
 }
 
 const Button = styled.button<ButtonProps>`
-  padding: 15px 20px;
-  width: 100%;
-  background-color: ${({ primary }) => (primary ? "#cef16f" : "#007bff")};
-  color: green;
+  padding: ${({ primary }) => (primary ? "15px 20px" : "15px px")};
+
+  width: ${({ primary }) => (primary ? "100%" : "100px")};
+  background-color: ${({ primary }) => (primary ? "#cef16f" : "#1e677f")};
+  color: ${({ primary }) => (primary ? "green" : "green")};
   border: none;
   border-radius: 20px;
   cursor: pointer;
@@ -127,6 +128,11 @@ const SummaryItem = styled.div`
   justify-content: space-between;
   padding: 10px 0;
   border-bottom: 1px solid #eee;
+  font-size: 14px;
+
+  p {
+    color: #8b8b8b;
+  }
 `;
 
 const Label = styled.h6`
@@ -136,7 +142,7 @@ const Label = styled.h6`
 
 const Value = styled.h6`
   margin: 0;
-  color: #333;
+  color: #084d11;
 `;
 
 const Total = styled(SummaryItem)`
@@ -151,24 +157,26 @@ const OfferSection = styled.div`
   margin-top: 20px;
   padding-top: 10px;
   border-top: 1px solid #eee;
+  font-size: 14px;
 `;
 
 const OfferImage = styled.img`
   width: 50px;
   height: 50px;
-  margin-right: 10px;
+  margin-right: 15px;
 `;
 
 const OfferText = styled.div`
   color: #555;
 
   p {
-    margin: 0;
+    margin-bottom: 5px;
+    color: #084d11;
   }
 
   a {
-    color: #007bff;
-    text-decoration: none;
+    color: #333;
+    text-decoration: underline;
 
     &:hover {
       text-decoration: underline;

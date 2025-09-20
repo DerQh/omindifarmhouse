@@ -49,6 +49,7 @@ const ShopDetails = styled.div`
   h5 {
     font-weight: 450;
     font-size: 14px;
+    color: #084d11;
   }
   p {
     font-size: 10px;
@@ -66,6 +67,7 @@ const ItemContainer = styled.div`
     font-size: 16px;
     margin: 15px 20px;
     font-weight: 600;
+    color: #084d11;
   }
 
   @media (max-width: 768px) {
@@ -110,6 +112,8 @@ const OrderSummary = styled.div`
   border-radius: 8px;
   h2 {
     font-size: 18px;
+    color: #084d11;
+
     /* margin-left: 20px; */
   }
 `;
@@ -129,6 +133,7 @@ const EditSection = styled.div`
   h4 {
     font-size: 16px;
     font-weight: 600;
+    color: #084d11;
   }
 
   img {
@@ -157,6 +162,7 @@ const DeliveryInfo = styled.div`
     font-size: 14px;
     font-weight: 450;
     margin-bottom: 5px;
+    color: #084d11;
   }
   p {
     font-size: 14px;
@@ -230,14 +236,17 @@ const ItemDetails = styled.div`
     font-size: 14px;
     line-height: 15px;
     font-weight: 500;
+    color: #084d11;
   }
   & > :nth-child(2) {
     font-size: 10px;
+    margin-top: 4px;
   }
   & > :nth-child(3) {
     margin-top: 24px;
     font-size: 14px;
     font-weight: 500;
+    color: #084d11;
   }
 `;
 

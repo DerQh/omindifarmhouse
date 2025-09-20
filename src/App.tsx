@@ -4,13 +4,15 @@ import Header from "./components/Header";
 import OtherStores from "./components/OtherStores";
 // import LandingPage from "./components/LandingPage";
 import ProductMain from "./components/ProductMain";
+import ExpandableOverlay from "./components/SecurelyLogIn";
 // import Product from "./components/Product";
 
 function App() {
   return (
     <>
       <Header />
-      <CheckoutPage />
+      {/* <CheckoutPage /> */}
+      <ExpandableOverlay />
       {/* <LandingPage /> */}
       {/* <ProductMain /> */}
       {/* <OtherStores /> */}
