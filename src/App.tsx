@@ -2,17 +2,17 @@ import CheckoutPage from "./components/Checkout";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import OtherStores from "./components/OtherStores";
-// import LandingPage from "./components/LandingPage";
+import LandingPage from "./components/LandingPage";
 import ProductMain from "./components/ProductMain";
-import ExpandableOverlay from "./components/SecurelyLogIn";
-// import Product from "./components/Product";
+import Product from "./components/Product";
+import PaymentComponent from "./components/Payment";
 
 function App() {
   return (
     <>
       <Header />
+      <PaymentComponent />
       {/* <CheckoutPage /> */}
-      <ExpandableOverlay />
       {/* <LandingPage /> */}
       {/* <ProductMain /> */}
       {/* <OtherStores /> */}
