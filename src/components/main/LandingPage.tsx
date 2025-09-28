@@ -5,10 +5,6 @@ const Container = styled.div`
   width: 85dvw;
   height: 70dvh;
   padding: 1rem;
-  background-image: url("/main.jpg"); /* Path to the image in the public folder */
-  background-size: cover; /* Cover the entire div */
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Prevent repeating */
   /* margin: 5rem; */
   border-radius: 1rem;
 `;
@@ -17,24 +13,33 @@ const SubContainer1 = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 3rem;
   width: 85dvw;
 `;
 
 const Subheading = styled.h1`
-  font-size: 2.1rem;
-  font-style: oblique;
-  font-weight: bold;
+  font-size: 3.2rem;
+  text-align: center;
+  font-weight: bolder;
+  color: #121212;
+  margin: 1rem 0;
+  /* backdrop-filter: blur(1px);
+  background: rgba(85, 154, 57, 0.2);
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem; */
 `;
 
 const Paragraphone = styled.p`
   margin: 0 1rem;
+  color: #fff;
+  font-size: rem;
 `;
 
 const ShoppingButton = styled.button`
   background-color: #e5f40e;
-  position: absolute;
+  /* position: absolute;
   top: 80%;
-  left: 10%;
+  left: 10%; */
   cursor: pointer;
   color: #0e530a;
   border: none;

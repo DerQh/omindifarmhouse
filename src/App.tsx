@@ -1,19 +1,22 @@
-import CheckoutPage from "./components/Checkout";
-import Footer from "./components/Footer";
-import Header from "./components/Header";
-import OtherStores from "./components/OtherStores";
-import LandingPage from "./components/LandingPage";
-import ProductMain from "./components/ProductMain";
-import Product from "./components/Product";
-import PaymentComponent from "./components/Payment";
+import CheckoutPage from "./components/checkout/Checkout";
+import Footer from "./components/main/Footer";
+import Header from "./components/main/Header";
+import LandingPage from "./components/main/LandingPage";
+import ProductMain from "./components/products/ProductMain";
+// import Product from "./components/products/Product";
+import PaymentComponent from "./components/Order/Payment";
+import OtherStores from "./components/products/OtherStores";
+import { styled } from "styled-components";
 
 function App() {
   return (
     <>
-      <Header />
-      <PaymentComponent />
+      <Container>
+        <Header />
+        <LandingPage />
+      </Container>
+      {/* <PaymentComponent /> */}
       {/* <CheckoutPage /> */}
-      {/* <LandingPage /> */}
       {/* <ProductMain /> */}
       {/* <OtherStores /> */}
       <Footer />
@@ -23,6 +26,45 @@ function App() {
 
 export default App;
 
+const Container = styled.div`
+  margin: 0 auto;
+  background-image: url("/main2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: inherit;
+    filter: blur(0.9px);
+    z-index: 0;
+  }
+
+  > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  @media (max-width: 600px) {
+    height: 100svh;
+  }
+  /* animation: backgroundChange 20s infinite;
+
+  @keyframes backgroundChange {
+    0% {
+      background-image: url("/main.jpg");
+    }
+    50% {
+      background-image: url("/main.jpg");
+    }
+    100% {
+      background-image: url("/main2.jpg");
+    }
+  } */
+`;
 // https://www.vecteezy.com/photo/24445456-tomato-on-the-white-background-generate-ai  -- FREE IMAGES FOR PRODUCT
 // color picker  -  https://imagecolorpicker.com/
 // https://www.flaticon.com/ ICONS

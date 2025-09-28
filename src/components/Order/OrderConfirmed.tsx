@@ -72,7 +72,7 @@ const HomeBtn = styled.button`
   font-weight: 500;
   border-radius: 30px;
   cursor: pointer;
-  margin: 30px 20px 0;
+  margin: 30px 20px 10px;
   padding: 15px;
   &:hover {
     background-color: #141414;

@@ -5,9 +5,23 @@ import OrderConfirmation from "./OrderConfirmed";
 
 const PaymentComponent: React.FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [isPaymentConfirmed, setIsPaymentConfirmed] = useState<boolean>(false);
+  const [isOrderConfirmed, setIsOrderConfirmed] = useState<boolean>(false);
 
   const toggleOpen = () => {
     setIsOpen((prev) => !prev);
+  };
+
+  const handlePaymentConfirmation = () => {
+    setIsPaymentConfirmed(true);
+    setTimeout(() => {
+      setIsPaymentConfirmed(false);
+      setIsOrderConfirmed(true);
+    }, 3000); // Show payment confirmation for 3 seconds
+    setTimeout(() => {
+      setIsOrderConfirmed(false);
+      setIsOpen(false);
+    }, 6000); // Show order confirmation for another 3 seconds
   };
 
   return (
@@ -15,17 +29,16 @@ const PaymentComponent: React.FC = () => {
       <Overlay isOpen={isOpen} onClick={toggleOpen} />
       <Content isOpen={isOpen}>
         {/* <CloseButton onClick={toggleOpen}>×</CloseButton> */}
-        {/* <PaymentConfirmation /> */}
-        <OrderConfirmation />
-        {/* <LockDiv>
-          <LockImg src="/lock.png" alt="" />
-        </LockDiv>
-
-        <p>Securely logging you in..</p>
-        <SecureParagraph>
-          You will be securely logged in using your email or registered phone
-          number
-        </SecureParagraph> */}
+        <>
+          <LockDiv>
+            <LockImg src="/lock.png" alt="" />
+          </LockDiv>
+          <p>Securely logging you in..</p>
+          <SecureParagraph>
+            You will be securely logged in using your email or registered phone
+            number
+          </SecureParagraph>
+        </>
       </Content>
       <ToggleButton onClick={toggleOpen}>
         {isOpen ? "Collapse" : "Expand"}

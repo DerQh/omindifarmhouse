@@ -28,7 +28,7 @@ const Navitem = styled.ul`
 
 const Webname = styled.div`
   font-size: 1rem;
-  font-weight: bold;
+  font-weight: 500;
 `;
 const Navlinks = styled.a`
   color: red;
@@ -44,7 +44,6 @@ const Navlinks = styled.a`
 const Signup = styled.li`
   color: red;
   text-decoration: none;
-  /* padding: 0.5rem 1rem */
 
   &:hover {
     background-color: darkblue;
@@ -52,13 +51,17 @@ const Signup = styled.li`
   }
 `;
 const SearchInput = styled.input`
-  padding: 0.5rem;
-  border: 1px solid darkblue;
+  padding: 0.3rem;
+  border: 0.5px solid gray;
   border-radius: 4px;
+  font-size: 16px;
 
   &:focus {
     outline: none;
-    /* border-color: darkblue; */
+    font-size: 16px;
+  }
+  &::placeholder {
+    font-size: 12px;
   }
 `;
 
@@ -72,18 +75,18 @@ const Toggle = styled.div`
 `;
 
 const Line = styled.div`
-  height: 3px;
+  height: 2px;
   background-color: black;
   border-radius: 2px;
   transition: all 0.3s ease;
   &:nth-child(1) {
-    width: 90%;
+    width: 80%;
   }
   &:nth-child(2) {
     width: 60%;
   }
   &:nth-child(3) {
-    width: 30%;
+    width: 40%;
   }
 `;
 const Logo = styled.div`
@@ -91,7 +94,7 @@ const Logo = styled.div`
   align-items: center;
   justify-content: space-between;
   gap: 0.5rem;
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: bold;
 `;
 const Image = styled.img`

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Product from "./Product";
 
 // PRODUCT MAIN IMAGE
 
@@ -21,7 +22,7 @@ function ProductMain() {
             <Reviews>(100 reviews)</Reviews>
           </RatingsDiv>
           <Price>
-            Ksh 24.99 <span> /kg</span>
+            Ksh 24<span>.99/kg</span>
           </Price>
           <Divider />
           <PayLaterDiv>
@@ -59,11 +60,11 @@ function ProductMain() {
               <Span>Fruits</Span> <span>,</span> <Span>Organic</Span>
               <span>,</span> <Span>Fresh </Span>
             </Category>
-            <p>
+            <ProductDescription>
               Fresh, organic, Red Globe tomatoes bursting with flavor. Ideal for
               salads, sauces, and healthy dishes, bringing nature's goodness
               straight to your table.
-            </p>
+            </ProductDescription>
             <DeliveryContainer>
               <DeliveryDiv>
                 <DeliveryIcon src="/delivery.png" alt="delivery icon" />
@@ -84,7 +85,7 @@ function ProductMain() {
 
 export default ProductMain;
 
-// BREAKPOINTS - RESPONSIVE WEBSITE 
+// BREAKPOINTS - RESPONSIVE WEBSITE
 const breakpoints = {
   xs: "576px", // Extra Small Devices
   sm: "768px", // Small Devices
@@ -138,7 +139,6 @@ const Container = styled.div`
   align-items: center;
   justify-content: space-around;
   padding: 0.5rem 1.5rem;
-
 
   @media (max-width: ${breakpoints.xs}) {
     font-size: 14px;
@@ -237,9 +237,9 @@ const FarmName = styled.h5`
 
 const Title = styled.h2`
   font-size: 2rem;
-  font-weight: 600;
+  font-weight: 500;
   color: #24695a;
-  margin: 0;
+  margin: 5px 0;
   @media (max-width: ${breakpoints.xs}) {
     font-size: 20px;
   }
@@ -251,8 +251,17 @@ const Title = styled.h2`
 
 const Price = styled.p`
   font-size: 2rem;
-  font-weight: bold;
+  font-weight: 500;
   color: #24695a;
+  margin: 10px 0;
+  span {
+    font-size: 12px;
+    font-weight: 400;
+    color: #424242;
+    margin-left: 1px;
+    vertical-align: super;
+  }
+
   @media (max-width: ${breakpoints.xs}) {
     font-size: 20px;
   }
@@ -267,8 +276,7 @@ const ButtonDiv = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding-top: 1rem;
-  /* gap: 1rem; */
+  margin: 10px 0;
 `;
 
 const CartButton = styled.div`
@@ -384,6 +392,7 @@ const WishListContainer = styled.div`
   cursor: pointer;
 `;
 const WishListDiv = styled.div`
+  margin: 10px 0;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -415,6 +424,13 @@ const DetailsContainer = styled.div`
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+`;
+
+const ProductDescription = styled.p`
+  font-size: 0.9rem;
+  color: gray;
+  font-weight: 400;
+  margin: 0.5rem 0;
 `;
 
 const FireDiv = styled.div`

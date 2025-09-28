@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import OrderSummaryComponent from "./OrderSummary";
+import OrderSummaryComponent from "../Order/OrderSummary";
 
 const CheckoutContainer = styled.div`
   display: flex;
