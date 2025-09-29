@@ -7,14 +7,17 @@ import ProductMain from "./components/products/ProductMain";
 import PaymentComponent from "./components/Order/Payment";
 import OtherStores from "./components/products/OtherStores";
 import { styled } from "styled-components";
+import ImageWrap from "./components/main/ImageWrap";
 
 function App() {
   return (
     <>
-      <Container>
+      <ContainerOne>
         <Header />
         <LandingPage />
-      </Container>
+      </ContainerOne>
+      <ImageWrap />
+
       {/* <PaymentComponent /> */}
       {/* <CheckoutPage /> */}
       {/* <ProductMain /> */}
@@ -26,7 +29,7 @@ function App() {
 
 export default App;
 
-const Container = styled.div`
+const ContainerOne = styled.div`
   margin: 0 auto;
   background-image: url("/main2.jpg");
   background-size: cover;
@@ -39,7 +42,7 @@ const Container = styled.div`
     position: absolute;
     inset: 0;
     background: inherit;
-    filter: blur(0.9px);
+    filter: blur(4px);
     z-index: 0;
   }
 

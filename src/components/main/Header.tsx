@@ -98,9 +98,9 @@ const Logo = styled.div`
   font-weight: bold;
 `;
 const Image = styled.img`
-  max-width: 100%;
-  height: 40px;
-  width: 40px;
+  /* max-width: 100%; */
+  height: 35px;
+  width: 35px;
   border-radius: 50%;
 `;
 
@@ -112,7 +112,7 @@ function Header() {
         <Line />
         <Line />
       </Toggle>
-      <SearchInput placeholder="Search..." />
+      {/* <SearchInput placeholder="Search..." /> */}
 
       <Navbar>
         <Navitem>
